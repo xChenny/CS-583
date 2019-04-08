@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>cnn</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>Homework3_ Simple Solution</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11747,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11772,16 +13114,14 @@ div#notebook {
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Home-3:-Build-a-CNN-for-image-recognition.">Home 3: Build a CNN for image recognition.<a class="anchor-link" href="#Home-3:-Build-a-CNN-for-image-recognition.">&#182;</a></h1><h3 id="Name:-[Your-Name?]">Name: [Your-Name?]<a class="anchor-link" href="#Name:-[Your-Name?]">&#182;</a></h3>
+<h1 id="Home-3:-Build-a-CNN-for-image-recognition.">Home 3: Build a CNN for image recognition.<a class="anchor-link" href="#Home-3:-Build-a-CNN-for-image-recognition.">&#182;</a></h1><h3 id="Name:-Andrew-Chen">Name: Andrew Chen<a class="anchor-link" href="#Name:-Andrew-Chen">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-You-will-do-the-following:">0. You will do the following:<a class="anchor-link" href="#0.-You-will-do-the-following:">&#182;</a></h2><ol>
 <li><p>Read, complete, and run my code.</p>
@@ -11797,7 +13137,7 @@ div#notebook {
 </li>
 <li><p>Submit the link to this .HTML file to Canvas.</p>
 <ul>
-<li>E.g., <a href="https://github.com/wangshusen/CS583A-2019Spring/blob/master/homework/HM3/cnn.html">https://github.com/wangshusen/CS583A-2019Spring/blob/master/homework/HM3/cnn.html</a></li>
+<li>Example: <a href="https://github.com/wangshusen/CS583A-2019Spring/blob/master/homework/HM3/cnn.html">https://github.com/wangshusen/CS583A-2019Spring/blob/master/homework/HM3/cnn.html</a></li>
 </ul>
 </li>
 </ol>
@@ -11806,16 +13146,14 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-Data-preparation">1. Data preparation<a class="anchor-link" href="#1.-Data-preparation">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.1.-Load-data">1.1. Load data<a class="anchor-link" href="#1.1.-Load-data">&#182;</a></h3>
 </div>
@@ -11823,11 +13161,16 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.datasets</span> <span class="k">import</span> <span class="n">cifar10</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">keras.utils</span> <span class="k">import</span> <span class="n">to_categorical</span>
+<span class="kn">from</span> <span class="nn">keras.wrappers.scikit_learn</span> <span class="k">import</span> <span class="n">KerasClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">keras</span> <span class="k">import</span> <span class="n">optimizers</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">cifar10</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
 
@@ -11835,17 +13178,38 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of y_train: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of x_test: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of y_test: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of classes: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">-</span> <span class="n">numpy</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of classes: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>shape of x_train: (50000, 32, 32, 3)
+shape of y_train: (50000, 1)
+shape of x_test: (10000, 32, 32, 3)
+shape of y_test: (10000, 1)
+number of classes: 10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.2.-One-hot-encode-the-labels">1.2. One-hot encode the labels<a class="anchor-link" href="#1.2.-One-hot-encode-the-labels">&#182;</a></h3><p>In the input, a label is a scalar in $\{0, 1, \cdots , 9\}$. One-hot encode transform such a scalar to a $10$-dim vector. E.g., a scalar <code>y_train[j]=3</code> is transformed to the vector <code>y_train_vec[j]=[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</code>.</p>
 <ol>
@@ -11860,12 +13224,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">to_one_hot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">num_class</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="o">&lt;</span><span class="n">fill</span> <span class="n">the</span> <span class="n">function</span><span class="o">&gt;</span>
-    <span class="o">...</span>
+    <span class="k">return</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="n">num_class</span><span class="p">)</span>
 
 <span class="n">y_train_vec</span> <span class="o">=</span> <span class="n">to_one_hot</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_test_vec</span> <span class="o">=</span> <span class="n">to_one_hot</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
@@ -11877,14 +13240,34 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">y_train_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of y_train_vec: (50000, 10)
+Shape of y_test_vec: (10000, 10)
+[6]
+[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Remark:-the-outputs-should-be">Remark: the outputs should be<a class="anchor-link" href="#Remark:-the-outputs-should-be">&#182;</a></h4><ul>
 <li>Shape of y_train_vec: (50000, 10)</li>
@@ -11897,8 +13280,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.3.-Randomly-partition-the-training-set-to-training-and-validation-sets">1.3. Randomly partition the training set to training and validation sets<a class="anchor-link" href="#1.3.-Randomly-partition-the-training-set-to-training-and-validation-sets">&#182;</a></h3><p>Randomly partition the 50K training samples to 2 sets:</p>
 <ul>
@@ -11911,10 +13293,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand_indices</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
 <span class="n">train_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">40000</span><span class="p">]</span>
 <span class="n">valid_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="mi">40000</span><span class="p">:</span><span class="mi">50000</span><span class="p">]</span>
 
@@ -11930,14 +13312,34 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of y_val: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_val</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of x_tr: (40000, 32, 32, 3)
+Shape of y_tr: (40000, 10)
+Shape of x_val: (10000, 32, 32, 3)
+Shape of y_val: (10000, 10)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Build-a-CNN-and-tune-its-hyper-parameters">2. Build a CNN and tune its hyper-parameters<a class="anchor-link" href="#2.-Build-a-CNN-and-tune-its-hyper-parameters">&#182;</a></h2><ol>
 <li>Build a convolutional neural network model</li>
@@ -11952,8 +13354,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Remark:">Remark:<a class="anchor-link" href="#Remark:">&#182;</a></h3><p>The following CNN is just an example. You are supposed to make <strong>substantial improvements</strong> such as:</p>
 <ul>
@@ -11967,60 +13368,137 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span><span class="p">,</span> <span class="n">BatchNormalization</span><span class="p">,</span> <span class="n">Dropout</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span>
 
-<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
-
-<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">build_model</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;relu&quot;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;relu&quot;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;relu&quot;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;relu&quot;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">model</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Augmentation">Data Augmentation<a class="anchor-link" href="#Data-Augmentation">&#182;</a></h2><p>We use data augmentation to increase the number of training samples we can utilize to train our model.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="k">import</span> <span class="n">ImageDataGenerator</span>
+
+<span class="c1"># data augmentation</span>
+<span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rotation_range</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Our-Hyperparameters">Our Hyperparameters<a class="anchor-link" href="#Our-Hyperparameters">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1E-4</span> <span class="c1"># to be tuned!</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">steps_per_epoch</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_tr</span><span class="p">)</span> <span class="o">//</span> <span class="n">batch_size</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-Find-the-Optimal-Hyperparameters!">Let's Find the Optimal Hyperparameters!<a class="anchor-link" href="#Let's-Find-the-Optimal-Hyperparameters!">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras</span> <span class="k">import</span> <span class="n">optimizers</span>
-
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1E-5</span> <span class="c1"># to be tuned!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">build_model</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
               <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span>
               <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">])</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">),</span>
+                              <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">steps_per_epoch</span><span class="p">,</span>
+                              <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
+                              <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;cifar10.h5&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">))</span>
-</pre></div>
-
-</div>
+    </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-plot-our-results-for-these-Hyper-Parameters...">Let's plot our results for these Hyper Parameters...<a class="anchor-link" href="#Let's-plot-our-results-for-these-Hyper-Parameters...">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12043,14 +13521,26 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hyperparamter-Tuning-Model-Results">Hyperparamter Tuning Model Results<a class="anchor-link" href="#Hyperparamter-Tuning-Model-Results">&#182;</a></h2><p>The rate that the accuracy is changing is logarithmic. I suspect that if I had ran more epochs, I would be able to get better performance, but at this point, 150 epochs is enough because I suspect that the improvement in accuracy is minimal per additional epoch due to its logarithmic shape.</p>
+<p>My final results:</p>
+<p>training accuracy: ~73%</p>
+<p>validation accuracy: ~75%</p>
+<p><img src="data:image/png;base64, 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R0Tap48bzBEntWnjBgfk/C+95FYLp57qVhG0wL2jSVXYICak550nbbWVax/GAqG49PscDxsmrbsuMyx3nm+YwjLLSHGxBSIkVjCPPpqpZ3sNEdhkk02CJH344YfJopo9njdvXjB37tzw+ceMGUOWuoCySiF7V5XyJlqwH3//exDcfXfTN3z55SC47rr0evPnB8HKKzP3DoLllw+C3XcPgmWXDYKDD3bHCxakXxcvfeYZdz1tMI58/30QzJwZBBtvHAQdOgTB+++72mecEQTt2gVBz55B0K9fvIUguOce18arrwYB91xvvSBYbLEgmDTJ1TvmGHftmDFBsPrqQbD//q78kkvcdS++6K7j/vRj2LBM+1tuGQR9+2aO2Zsxw/VjkUWC4MILg6AZ/2VJ1ZmdzJhCw99M8mjatGlBnz59gg022CBYf/31g6effjpZpazHxhTKCn/L33z27CBYYgk3gLOfiw47LAjatHEDdbIegyeD6DnnuDrsn3hiENx8syv/9NPkFY2Pb7zR1WXLIMu9VlnF7T/xRKb+ffe5etzjb3/LlLM3fbob9E89NQhefz1T7/LLg2DCBHfuhBPcNb/5TRB07+72+/RxdXv3DoIHH8xc989/uvMwPXA6+WR3HP+GMRx+uLvmiiviZwraN6ZQEFxWuaUQMKbQUkhXyH0eeigzADKA56Kdd3Z1n33W1XrssSCg7LvvgmDgwCBYcskgmDUrCJjJM2CPGhUE773n9u+8M1fL7tzppwdB+/ZB8MsvQfD2247BbLppENxyS8NrP/440+exYxue46h//yBYddUg+N3v3EC+1VbumH7BbDyDuuoq1w73or+sAtguvngQ9OjhmNK557r2P/nEnbv99sb38yVgyfMvJBlTWEjg7LLSImBMobT4tljriE6OPz4IEKPkIsQ7nToFwYYbOlFLLjHP+uu7gfHii12Lu+zijhG1ICo65BBXjgiFgRZiho3ox8/OXWn69z77BEGvXunn4qUwjaWWciKmeLnf/9e/XL9YaRx5ZBA8/LA7hiF4cRF1/epmwAB3fvToINhtN7cPE1tjDSf+ou5//uPKR470dyn61phC0SG1BouBgDGFYqBYAW0we2fWe8AB2Tvz449uwGZGfccdrv7Qodnrd+7s6sAMmBEj199mm4y46NFH06/daacg2GijzLkffgiCI44Igq+/zpSx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" alt="image.png"></p>
+<p>When training I seemed to have my validation always be higher than my training accuracy. I didn't have the time to test it out, but I suspect that my validation data (regular x_val, y_val), which is not being augmented, lacks the variety that my training data (which is being augmented) is subject to.</p>
+
 </div>
-<div class="inner_cell">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Train-(again)-and-evaluate-the-model">3. Train (again) and evaluate the model<a class="anchor-link" href="#3.-Train-(again)-and-evaluate-the-model">&#182;</a></h2><ul>
 <li>To this end, you have found the "best" hyper-parameters. </li>
@@ -12062,8 +13552,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.1.-Train-the-model-on-the-entire-training-set">3.1. Train the model on the entire training set<a class="anchor-link" href="#3.1.-Train-the-model-on-the-entire-training-set">&#182;</a></h3><p>Why? Previously, you used 40K samples for training; you wasted 10K samples for the sake of hyper-parameter tuning. Now you already know the hyper-parameters, so why not using all the 50K samples for training?</p>
 
@@ -12072,37 +13561,428 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">Compile</span> <span class="n">your</span> <span class="n">model</span> <span class="n">again</span> <span class="p">(</span><span class="n">using</span> <span class="n">the</span> <span class="n">same</span> <span class="n">hyper</span><span class="o">-</span><span class="n">parameters</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_model</span> <span class="o">=</span> <span class="n">build_model</span><span class="p">()</span>
+
+<span class="n">final_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
+              <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span>
+              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 32, 32, 32)        896       
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 32, 32, 32)        128       
+_________________________________________________________________
+activation_1 (Activation)    (None, 32, 32, 32)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 16, 16, 32)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 16, 16, 64)        18496     
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 16, 16, 64)        256       
+_________________________________________________________________
+activation_2 (Activation)    (None, 16, 16, 64)        0         
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 8, 8, 64)          0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 8, 8, 128)         73856     
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 8, 8, 128)         512       
+_________________________________________________________________
+activation_3 (Activation)    (None, 8, 8, 128)         0         
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 4, 4, 128)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 4, 4, 128)         0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 4, 4, 256)         295168    
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 4, 4, 256)         1024      
+_________________________________________________________________
+activation_4 (Activation)    (None, 4, 4, 256)         0         
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 2, 2, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               131200    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 128)               16512     
+_________________________________________________________________
+dense_3 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 539,338
+Trainable params: 538,378
+Non-trainable params: 960
+_________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">Train</span> <span class="n">your</span> <span class="n">model</span> <span class="n">on</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">training</span> <span class="nb">set</span> <span class="p">(</span><span class="mi">50</span><span class="n">K</span> <span class="n">samples</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">Use</span> <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train_vec</span><span class="p">)</span> <span class="n">instead</span> <span class="n">of</span> <span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">Do</span> <span class="n">NOT</span> <span class="n">use</span> <span class="n">the</span> <span class="n">validation_data</span> <span class="n">option</span> <span class="p">(</span><span class="n">because</span> <span class="n">now</span> <span class="n">you</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">validation</span> <span class="n">data</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">final_model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train_vec</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">),</span>
+                              <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">steps_per_epoch</span><span class="p">,</span>
+                              <span class="n">epochs</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WARNING:tensorflow:From /opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Epoch 1/150
+312/312 [==============================] - 26s 84ms/step - loss: 2.0991 - acc: 0.2264
+Epoch 2/150
+312/312 [==============================] - 23s 74ms/step - loss: 1.8700 - acc: 0.2985
+Epoch 3/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.7712 - acc: 0.3402
+Epoch 4/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.7027 - acc: 0.3682
+Epoch 5/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.6602 - acc: 0.3845
+Epoch 6/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.6268 - acc: 0.4001
+Epoch 7/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.5863 - acc: 0.4160
+Epoch 8/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.5483 - acc: 0.4294
+Epoch 9/150
+312/312 [==============================] - 23s 72ms/step - loss: 1.5316 - acc: 0.4379
+Epoch 10/150
+312/312 [==============================] - 23s 73ms/step - loss: 1.5040 - acc: 0.4501
+Epoch 11/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.4734 - acc: 0.4623
+Epoch 12/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.4500 - acc: 0.4715
+Epoch 13/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.4238 - acc: 0.4822
+Epoch 14/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.4042 - acc: 0.4890
+Epoch 15/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.3914 - acc: 0.4923
+Epoch 16/150
+312/312 [==============================] - 23s 73ms/step - loss: 1.3697 - acc: 0.5039
+Epoch 17/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.3580 - acc: 0.5104
+Epoch 18/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.3479 - acc: 0.5140
+Epoch 19/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.3297 - acc: 0.5205
+Epoch 20/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.3101 - acc: 0.5278
+Epoch 21/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.3073 - acc: 0.5294
+Epoch 22/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2962 - acc: 0.5368
+Epoch 23/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2837 - acc: 0.5357
+Epoch 24/150
+312/312 [==============================] - 23s 72ms/step - loss: 1.2711 - acc: 0.5451
+Epoch 25/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2610 - acc: 0.5493
+Epoch 26/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2452 - acc: 0.5544
+Epoch 27/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2410 - acc: 0.5526
+Epoch 28/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2407 - acc: 0.5574
+Epoch 29/150
+312/312 [==============================] - 22s 70ms/step - loss: 1.2180 - acc: 0.5677
+Epoch 30/150
+312/312 [==============================] - 23s 73ms/step - loss: 1.2130 - acc: 0.5660
+Epoch 31/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.2068 - acc: 0.5702
+Epoch 32/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1908 - acc: 0.5752
+Epoch 33/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1820 - acc: 0.5791
+Epoch 34/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1760 - acc: 0.5803
+Epoch 35/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1724 - acc: 0.5851
+Epoch 36/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.1676 - acc: 0.5842
+Epoch 37/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.1541 - acc: 0.5890
+Epoch 38/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1501 - acc: 0.5897
+Epoch 39/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1457 - acc: 0.5922
+Epoch 40/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1368 - acc: 0.5981
+Epoch 41/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1307 - acc: 0.5985
+Epoch 42/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1211 - acc: 0.6049
+Epoch 43/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1159 - acc: 0.6041
+Epoch 44/150
+312/312 [==============================] - 23s 73ms/step - loss: 1.1185 - acc: 0.6058
+Epoch 45/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.1020 - acc: 0.6089
+Epoch 46/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.0973 - acc: 0.6086
+Epoch 47/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0944 - acc: 0.6097
+Epoch 48/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0874 - acc: 0.6173
+Epoch 49/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.0783 - acc: 0.6190
+Epoch 50/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.0685 - acc: 0.6216
+Epoch 51/150
+312/312 [==============================] - 23s 72ms/step - loss: 1.0768 - acc: 0.6190
+Epoch 52/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0675 - acc: 0.6259
+Epoch 53/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0594 - acc: 0.6275
+Epoch 54/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0559 - acc: 0.6254
+Epoch 55/150
+312/312 [==============================] - 22s 70ms/step - loss: 1.0518 - acc: 0.6264
+Epoch 56/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0389 - acc: 0.6339
+Epoch 57/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0397 - acc: 0.6344
+Epoch 58/150
+312/312 [==============================] - 23s 73ms/step - loss: 1.0354 - acc: 0.6368
+Epoch 59/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0320 - acc: 0.6374
+Epoch 60/150
+312/312 [==============================] - 22s 70ms/step - loss: 1.0241 - acc: 0.6428
+Epoch 61/150
+312/312 [==============================] - 22s 70ms/step - loss: 1.0228 - acc: 0.6402
+Epoch 62/150
+312/312 [==============================] - 22s 70ms/step - loss: 1.0149 - acc: 0.6458
+Epoch 63/150
+312/312 [==============================] - 22s 71ms/step - loss: 1.0083 - acc: 0.6448
+Epoch 64/150
+312/312 [==============================] - 22s 70ms/step - loss: 1.0125 - acc: 0.6419
+Epoch 65/150
+312/312 [==============================] - 22s 72ms/step - loss: 1.0081 - acc: 0.6473
+Epoch 66/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9991 - acc: 0.6489
+Epoch 67/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9972 - acc: 0.6519
+Epoch 68/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9975 - acc: 0.6506
+Epoch 69/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.9887 - acc: 0.6535
+Epoch 70/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9868 - acc: 0.6557
+Epoch 71/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9819 - acc: 0.6537
+Epoch 72/150
+312/312 [==============================] - 23s 72ms/step - loss: 0.9729 - acc: 0.6570
+Epoch 73/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9720 - acc: 0.6618
+Epoch 74/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.9707 - acc: 0.6600
+Epoch 75/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9585 - acc: 0.6653
+Epoch 76/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.9686 - acc: 0.6606
+Epoch 77/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.9636 - acc: 0.6628
+Epoch 78/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.9547 - acc: 0.6668
+Epoch 79/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.9564 - acc: 0.6659
+Epoch 80/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9474 - acc: 0.6705
+Epoch 81/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9410 - acc: 0.6713
+Epoch 82/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9419 - acc: 0.6700
+Epoch 83/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9472 - acc: 0.6669
+Epoch 84/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9391 - acc: 0.6735
+Epoch 85/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9324 - acc: 0.6769
+Epoch 86/150
+312/312 [==============================] - 23s 73ms/step - loss: 0.9373 - acc: 0.6732
+Epoch 87/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9267 - acc: 0.6751
+Epoch 88/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9295 - acc: 0.6764
+Epoch 89/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9273 - acc: 0.6777
+Epoch 90/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.9179 - acc: 0.6812
+Epoch 91/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9137 - acc: 0.6811
+Epoch 92/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9120 - acc: 0.6828
+Epoch 93/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.9147 - acc: 0.6820
+Epoch 94/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9159 - acc: 0.6807
+Epoch 95/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9055 - acc: 0.6834
+Epoch 96/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9014 - acc: 0.6851
+Epoch 97/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9021 - acc: 0.6828
+Epoch 98/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8994 - acc: 0.6881
+Epoch 99/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.9002 - acc: 0.6886
+Epoch 100/150
+312/312 [==============================] - 23s 73ms/step - loss: 0.8910 - acc: 0.6882
+Epoch 101/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8912 - acc: 0.6877
+Epoch 102/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8853 - acc: 0.6925
+Epoch 103/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8774 - acc: 0.6950
+Epoch 104/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8867 - acc: 0.6929
+Epoch 105/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8788 - acc: 0.6922
+Epoch 106/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8785 - acc: 0.6949
+Epoch 107/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8724 - acc: 0.6968
+Epoch 108/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8803 - acc: 0.6954
+Epoch 109/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8703 - acc: 0.6980
+Epoch 110/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8682 - acc: 0.6940
+Epoch 111/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8613 - acc: 0.7043
+Epoch 112/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8641 - acc: 0.7009
+Epoch 113/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8702 - acc: 0.6990
+Epoch 114/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8630 - acc: 0.6978
+Epoch 115/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8625 - acc: 0.7008
+Epoch 116/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8629 - acc: 0.6994
+Epoch 117/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8583 - acc: 0.7004
+Epoch 118/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8484 - acc: 0.7061
+Epoch 119/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8490 - acc: 0.7050
+Epoch 120/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8502 - acc: 0.7049
+Epoch 121/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8423 - acc: 0.7077
+Epoch 122/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8359 - acc: 0.7102
+Epoch 123/150
+312/312 [==============================] - 22s 69ms/step - loss: 0.8392 - acc: 0.7111
+Epoch 124/150
+312/312 [==============================] - 21s 69ms/step - loss: 0.8382 - acc: 0.7080
+Epoch 125/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8340 - acc: 0.7110
+Epoch 126/150
+312/312 [==============================] - 22s 70ms/step - loss: 0.8293 - acc: 0.7105
+Epoch 127/150
+312/312 [==============================] - 23s 72ms/step - loss: 0.8356 - acc: 0.7073
+Epoch 128/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8355 - acc: 0.7122
+Epoch 129/150
+312/312 [==============================] - 23s 73ms/step - loss: 0.8308 - acc: 0.7144
+Epoch 130/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8213 - acc: 0.7148
+Epoch 131/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.8257 - acc: 0.7153
+Epoch 132/150
+312/312 [==============================] - 23s 73ms/step - loss: 0.8276 - acc: 0.7134
+Epoch 133/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.8285 - acc: 0.7150
+Epoch 134/150
+312/312 [==============================] - 23s 72ms/step - loss: 0.8182 - acc: 0.7170
+Epoch 135/150
+312/312 [==============================] - 23s 73ms/step - loss: 0.8167 - acc: 0.7169
+Epoch 136/150
+312/312 [==============================] - 23s 72ms/step - loss: 0.8142 - acc: 0.7170
+Epoch 137/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.8109 - acc: 0.7198
+Epoch 138/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.8144 - acc: 0.7181
+Epoch 139/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8071 - acc: 0.7205
+Epoch 140/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8149 - acc: 0.7150
+Epoch 141/150
+312/312 [==============================] - 22s 71ms/step - loss: 0.8074 - acc: 0.7211
+Epoch 142/150
+312/312 [==============================] - 23s 74ms/step - loss: 0.8025 - acc: 0.7205
+Epoch 143/150
+312/312 [==============================] - 23s 74ms/step - loss: 0.8095 - acc: 0.7193
+Epoch 144/150
+312/312 [==============================] - 23s 74ms/step - loss: 0.8000 - acc: 0.7245
+Epoch 145/150
+312/312 [==============================] - 23s 73ms/step - loss: 0.8009 - acc: 0.7228
+Epoch 146/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.7951 - acc: 0.7244
+Epoch 147/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.7989 - acc: 0.7235
+Epoch 148/150
+312/312 [==============================] - 23s 75ms/step - loss: 0.7959 - acc: 0.7229
+Epoch 149/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.7907 - acc: 0.7250
+Epoch 150/150
+312/312 [==============================] - 22s 72ms/step - loss: 0.7975 - acc: 0.7242
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.2.-Evaluate-the-model-on-the-test-set">3.2. Evaluate the model on the test set<a class="anchor-link" href="#3.2.-Evaluate-the-model-on-the-test-set">&#182;</a></h3><p>Do NOT used the test set until now. Make sure that your model parameters and hyper-parameters are independent of the test set.</p>
 
@@ -12111,15 +13991,48 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_and_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test_vec</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_and_acc</span> <span class="o">=</span> <span class="n">final_model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test_vec</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loss = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">loss_and_acc</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">loss_and_acc</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10000/10000 [==============================] - 1s 114us/step
+loss = 0.7581720972061157
+accuracy = 0.7334
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
