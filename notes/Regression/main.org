@@ -1,0 +1,29 @@
+* Regression
+
+** Warmup
+
+   - An n x d matrix is one that has n rows and d columns
+   - Vector Norms:
+     - l_{p} norm: ||x||_{p} = (\sum_{i} |x_{i}|^{p})^{1/p}
+     - l_{2} norm (Euclidean Norm): ||x||_{2} = (\sum_{i} x_{i}^{2})^{1/2}
+     - l_{\infty} norm: ||x||_{\infty} = \max_{i}|x_{i}|
+     
+      #+CAPTION: Norm distances
+      [[./images/norm_distances.png]]
+     
+** Rank
+
+   - Rank: The number of linearly independent rows (or columns).
+   - Full Rank: a square matrix is full rank if the rank equals to #columns.
+   
+** Eigenvalue Decomposition
+
+    - let 𝐀 be any 𝑛×𝑛 symmetric matrix.
+    - Eigenvalue decomposition: A = \sum^{n}_{i=1} \lambda_{i}v_{i}v^{T}_{i}
+    - Eigenvalues satisfy |\lambda_{1}| \ge |\lambda_{2}| \ge \dots{} \ge |\lambda_{n}|
+    - Eigenvectors satisfy v^{T}_{i}v_{j} = 0 for all i \ne j
+    - **A** is a full rank iff all the eigenvalues are nonzero
+    
+** Least Squares Regression with Gradient Descent
+
+   1. Least squares regression model: x{\hat{x}}

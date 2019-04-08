@@ -1,0 +1,47 @@
+* Convolutional Neural Networks
+
+  - If filter = 5x5, and input Matrix A = 28x28, the result of the convolution is 24x24.
+    - 24 = 28 - 5 + 1
+    - General Formula: **dimensionOfConvolution = inputMatrixDimension - filterDimensions + 1**
+    
+      
+  - Neurons mean input/output vectors
+  - edges mean parameters
+  
+* Tricks to Improve Model Performance
+
+** Dropout Regularization
+
+  - Used to reduce dimensionality
+  - Randomly "dropout" n% of nodes in a layer and scale up the remaining ones by 1/0.n
+  - You add a dropout layer *BEFORE* the layer that needs to be regularized (layers that have too many trainable parameters)
+  - Regularization prevents overfitting
+
+** Data Augmentation
+  - More effective than Dropout
+  - Basically, generate more sample from the pre-existing samples
+    - ie: make a horizontal flip of an image
+  - Always use this technique when doing CNN on images!
+    - It just gives you more data for free
+    
+** Pretrain
+
+   - If we wanted to use a Deep Neural Network (10s of layers) on a sample size of ~3000, then surely we would overfit
+   - We can pretrain a DNN on a pre-existing related large-scale dataset.
+   - Steps:
+     - Pretrain deep net on a large-scale dataset. e.g., ImageNet (14M images with labels)
+     - Remove the top layers.
+     - Build new top layers (randomly initialized)
+     - Freeze the base layers; Train the top layers
+     - Optional: Fine-tune the top Conv layers
+     
+** Ensemble Methods
+    - Varying data (bagging)
+    - ie: Split data into parts, and train several models on those subparts. Once trained, each of them will make a prediction, and take the aggregation of the predictions
+    - We should always use this
+
+** Multitask Learning
+   - Share
+   
+* 
+

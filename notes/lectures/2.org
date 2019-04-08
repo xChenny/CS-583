@@ -1,0 +1,16 @@
+* SVM
+  
+
+* Softmax
+
+  - Meant to solve multi-class classification problems (face recognition, handwriting->alphanumeric chars)
+  - Cross entropy loss function is most popular pairing
+    - Cross entropy is a measure of how "similar" two distributions are.
+    - Maximum cross entropy -> the two distributions are more similar
+    - 
+* Optimization
+
+  - Convex: When you make a line segment between any two points in a domain, all point along the line segment must still be within the domain
+  - 
+  - 
+

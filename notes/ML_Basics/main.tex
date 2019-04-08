@@ -1,0 +1,154 @@
+% Created 2019-02-23 Sat 17:33
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Andrew Chen}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Andrew Chen},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Machine Learning Basics}
+\label{sec:org01219e3}
+
+
+\subsection{4 Broad Machine Learning Tasks}
+\label{sec:org33d2155}
+
+\begin{enumerate}
+\item Classification
+\item Regression
+\item Clustering
+\item Dimenisionality Reduction
+\end{enumerate}
+
+\subsection{Classification}
+\label{sec:org63f4d3b}
+
+Broadly, classification is the task of making a decision on "what" something is. (Making a choice between n choices)
+
+There are many examples:
+
+\begin{enumerate}
+\item Spam Recognition (Spam, or not spam: Binary classification)
+\item Face Recognition (This is Matt Damon, etc.: Multi-class classification)
+\end{enumerate}
+
+\subsection{Regression}
+\label{sec:org6ca3734}
+
+Obtain a number from data. This is the task of getting a quantitative number from data.
+
+Examples:
+
+\begin{enumerate}
+\item Housing price from feature data
+\end{enumerate}
+
+
+\subsection{Classification vs Regression}
+\label{sec:orgd25b068}
+
+\begin{itemize}
+\item Regression: labels are continuous and ordered
+\item Classification: labels are categorical
+\end{itemize}
+
+
+\subsection{Supervised or Unsupervised?}
+\label{sec:orga98606b}
+
+Supervised learning is when you train your model with data that has a "correct answer" or label. ie: Given an image of a face, you also have the name of the owner of the face.
+
+Unsupervised learning is when you train your model with data that has no label. Unsupervised learning is great for training a model that seeks to find common patterns or traits among data points.
+
+
+\begin{itemize}
+\item Classification: Supervised
+\item Regression: Supervised
+\item Clustering: Unsupervised
+\item Dimensionality Reduction: Supervised/Unsupervised
+\end{itemize}
+
+\subsection{Clustering: Unsupervised Learning}
+\label{sec:orgc042269}
+
+A type of task that seeks to "split" data points by how "similar" they are by their proximity to each other.
+
+\begin{itemize}
+\item \textbf{\textbf{Input:}}
+\begin{enumerate}
+\item large number of data points (n)
+\item number of clusters that is much smaller than n (k << n)
+\end{enumerate}
+
+\item \textbf{\textbf{Output:}}
+\begin{enumerate}
+\item Data points with associated labels found through clustering, where the labels are 1 of the k clusters that was inputted into the training
+\end{enumerate}
+\end{itemize}
+
+\subsection{Dimensionality Reduction}
+\label{sec:orgeb985df}
+
+A task that seeks to eliminate unnecessary data from an input that makes the dimensions smaller and thus easier to be used for computation
+
+
+\subsection{The Big Picture}
+\label{sec:org2bb36b3}
+
+\begin{enumerate}
+\item Tasks are the general problems that one seeks to solve.
+\item Methods are the approach that we attempt to solve problems (or tasks).
+\item Algorithms are the specific, mathematical algorithms that determine results. These algorithms are used to obtain intermediary output that we can tune and adjust to converge on the best possible answer for this specific algorithm/model combination.
+\end{enumerate}
+
+\textbf{\textbf{Example:}}
+
+\begin{itemize}
+\item Regression
+\item Classification
+\begin{itemize}
+\item Methods
+\begin{itemize}
+\item Neural Networks
+\item SVM
+\item Logistic Regression
+\begin{itemize}
+\item Algorithms
+\begin{itemize}
+\item Gradient Descent
+\item Stochastic GD
+\item Coordinate Descent (CD)
+\item Dual CD
+\item Newton's Method
+\end{itemize}
+\end{itemize}
+\item Decision Tree
+\item Nearest Neighbor
+\end{itemize}
+\end{itemize}
+\item Clustering
+\item Dimensionality Reduction
+\end{itemize}
+\end{document}

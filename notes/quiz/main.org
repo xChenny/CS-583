@@ -1,0 +1,121 @@
+* Things to Study For Quiz
+
+** Basic Vector and Matrix Operations
+
+*** Multiplication
+
+   - Vector-Vector multiplication
+   - Vector-Matrix multiplication
+   - Matrix-Matrix multiplication
+   - Matrix-Vector multiplication
+   
+*** Finding Matrix Inverse
+
+    - For 2x2 Matrix:
+
+      If A =
+
+        \[\begin{bmatrix}
+        a&b\\
+        c&d\\
+        \end{bmatrix}\]
+
+      A^{-1} =
+
+        1/det(A) *
+    \[\begin{bmatrix}
+        d&-b\\
+        -c&a\\
+        \end{bmatrix}\]
+
+     - For 3x3 Matrix:
+     - Write a picture for this
+
+    
+*** Determinant
+
+    The factor by which a linear transformation changes the "area/volume" of a unit square/cube in a grid
+
+    If negative, then the unit square is "flipped" over its axis. (Like a square on paper after flipping the piece of paper)
+
+    - If A =
+
+     \[\begin{bmatrix}
+     a&b\\
+     c&d\\
+     \end{bmatrix}\]
+
+
+     **det(A) = ad - bc**
+
+     - For calculating 3x3 matrices, go along the top row, and for a, b, c, cover the current row and column of a, b, c and multiply the a, b, c with the determinant of the uncovered numbers.
+       - For the "a" term, it's positive
+       - For the "b" term, it's negative
+       - For the "c" term, it's positive
+
+     - If M =
+     
+      \[\begin{bmatrix}
+      a&b&c\\
+      d&e&f\\
+      g&h&i\\
+      \end{bmatrix}\]
+
+      A = 
+      \[\begin{bmatrix}
+      e&f\\
+      h&i\\
+      \end{bmatrix}\]
+
+      B = 
+      \[\begin{bmatrix}
+      d&f\\
+      g&i\\
+      \end{bmatrix}\]
+
+      C = 
+      \[\begin{bmatrix}
+      d&e\\
+      g&h\\
+      \end{bmatrix}\]
+
+      **det(M) = a*det(A) - b*det(B) + c*det(C)**
+
+*** Condition Number
+
+    This is a measure of how much a small change in the transformation matrix or the output would affect the input vector
+
+    [[./images/condition1.png]]
+    #+CAPTION: If a small change in the A, or output occurs, how much is v affected?
+
+    - If condition(A) \cong 1.0 \rightarrow "Well Conditioned"
+    - If condition(A) > 1.0 \rightarrow "Ill Conditioned"
+    - Condition(A): \kappa(A) = ||A|| * ||A^{-1}||
+
+** Vector Norms
+
+   - l_{\infty} Norm:
+
+      max_{i}|x_{i}|
+
+   - l_{p} Norm:
+
+     \Sigma_{i=1}^{n} (|n|^{p})^{1/p}
+
+** Vector Derivatives
+
+   - General Derivatives
+     [[./images/derivatives.png]]
+   
+** Machine Learning Basics
+
+   1. Regression
+   2. Classification
+   3. Clustering
+   4. Dimensionality Reduction
+   5. Activations functions (Logistic, ReLU, Leaky ReLU...)
+   6. Convex functions
+
+** Topics not on the Quiz
+
+   * Neural Networks
