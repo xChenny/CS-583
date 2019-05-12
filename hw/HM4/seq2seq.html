@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>seq2seq</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>second</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11772,16 +13114,18 @@ div#notebook {
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Home-4:-Build-a-seq2seq-model-for-machine-translation.">Home 4: Build a seq2seq model for machine translation.<a class="anchor-link" href="#Home-4:-Build-a-seq2seq-model-for-machine-translation.">&#182;</a></h1><h3 id="Name:-[Your-Name?]">Name: [Your-Name?]<a class="anchor-link" href="#Name:-[Your-Name?]">&#182;</a></h3><h3 id="Task:-Translate-English-to-[what-language?]">Task: Translate English to [what-language?]<a class="anchor-link" href="#Task:-Translate-English-to-[what-language?]">&#182;</a></h3>
+<h1 id="Home-4:-Build-a-seq2seq-model-for-machine-translation.">Home 4: Build a seq2seq model for machine translation.<a class="anchor-link" href="#Home-4:-Build-a-seq2seq-model-for-machine-translation.">&#182;</a></h1>
+<pre><code>### Name: Andrew Chen
+
+</code></pre>
+<h3 id="Task:-Translate-English-to-French">Task: Translate English to French<a class="anchor-link" href="#Task:-Translate-English-to-French">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-You-will-do-the-following:">0. You will do the following:<a class="anchor-link" href="#0.-You-will-do-the-following:">&#182;</a></h2><ol>
 <li>Read and run my code.</li>
@@ -11823,8 +13167,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h3><p>To implement <code>Bi-LSTM</code>, you will need the following code to build the encoder; the decoder won't be much different.</p>
 
@@ -11833,27 +13176,26 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[217]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Bidirectional</span><span class="p">,</span> <span class="n">Concatenate</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from keras.layers import Bidirectional, Concatenate</span>
 
-<span class="n">encoder_bilstm</span> <span class="o">=</span> <span class="n">Bidirectional</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">,</span> <span class="n">return_state</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-                                  <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;encoder_lstm&#39;</span><span class="p">))</span>
-<span class="n">_</span><span class="p">,</span> <span class="n">forward_h</span><span class="p">,</span> <span class="n">forward_c</span><span class="p">,</span> <span class="n">backward_h</span><span class="p">,</span> <span class="n">backward_c</span> <span class="o">=</span> <span class="n">encoder_bilstm</span><span class="p">(</span><span class="n">encoder_inputs</span><span class="p">)</span>
+<span class="c1"># encoder_bilstm = Bidirectional(LSTM(latent_dim, return_state=True, </span>
+<span class="c1">#                                   dropout=0.5, name=&#39;encoder_lstm&#39;))</span>
+<span class="c1"># _, forward_h, forward_c, backward_h, backward_c = encoder_bilstm(encoder_inputs)</span>
 
-<span class="n">state_h</span> <span class="o">=</span> <span class="n">Concatenate</span><span class="p">()([</span><span class="n">forward_h</span><span class="p">,</span> <span class="n">backward_h</span><span class="p">])</span>
-<span class="n">state_c</span> <span class="o">=</span> <span class="n">Concatenate</span><span class="p">()([</span><span class="n">forward_c</span><span class="p">,</span> <span class="n">backward_c</span><span class="p">])</span>
+<span class="c1"># state_h = Concatenate()([forward_h, backward_h])</span>
+<span class="c1"># state_c = Concatenate()([forward_c, backward_c])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h3><p>To implement multi-task training, you can refer to <code>Section 7.1.3 Multi-output models</code> of the textbook, <code>Deep Learning with Python</code>.</p>
 
@@ -11861,8 +13203,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-Data-preparation">1. Data preparation<a class="anchor-link" href="#1.-Data-preparation">&#182;</a></h2><ol>
 <li>Download data (e.g., "deu-eng.zip") from <a href="http://www.manythings.org/anki/">http://www.manythings.org/anki/</a></li>
@@ -11874,8 +13215,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.1.-Load-and-clean-text">1.1. Load and clean text<a class="anchor-link" href="#1.1.-Load-and-clean-text">&#182;</a></h3>
 </div>
@@ -11883,7 +13223,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[258]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -11936,14 +13276,13 @@ div#notebook {
     <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Fill-the-following-blanks:">Fill the following blanks:<a class="anchor-link" href="#Fill-the-following-blanks:">&#182;</a></h4>
 </div>
@@ -11951,24 +13290,29 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[259]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># e.g., filename = &#39;Data/deu.txt&#39;</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">what</span> <span class="ow">is</span> <span class="n">your</span> <span class="n">file</span> <span class="n">name</span><span class="err">?</span><span class="o">&gt;</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;Data/fra.txt&quot;</span>
 
 <span class="c1"># e.g., n_train = 20000</span>
-<span class="n">n_train</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">how</span> <span class="n">many</span> <span class="n">sentences</span> <span class="n">are</span> <span class="n">you</span> <span class="n">going</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">training</span><span class="err">?</span><span class="o">&gt;</span>
+<span class="n">n_train</span> <span class="o">=</span> <span class="mi">30000</span>
+
+<span class="n">rand_indices</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">n_train</span><span class="p">)</span>
+<span class="n">train_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20000</span><span class="p">]</span>
+<span class="n">valid_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="mi">20000</span><span class="p">:</span><span class="mi">25000</span><span class="p">]</span>
+<span class="n">test_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="mi">25000</span><span class="p">:</span><span class="mi">30000</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[260]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load dataset</span>
@@ -11978,31 +13322,58 @@ div#notebook {
 <span class="n">pairs</span> <span class="o">=</span> <span class="n">to_pairs</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
 
 <span class="c1"># clean sentences</span>
-<span class="n">clean_pairs</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">(</span><span class="n">pairs</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="n">n_train</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">clean_pairs</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">(</span><span class="n">pairs</span><span class="p">)[</span><span class="n">train_indices</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[261]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3010</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">clean_pairs</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;] =&gt; [&#39;</span> <span class="o">+</span> <span class="n">clean_pairs</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[he squinted] =&gt; [il a louche]
+[does it offend you] =&gt; [cela vous offensetil]
+[did he go there] =&gt; [y estil alle]
+[be prepared] =&gt; [soyez pretes]
+[she baked me a cake] =&gt; [elle me prepara un gateau]
+[i feel it now] =&gt; [je le sens maintenant]
+[she is darkskinned] =&gt; [elle a la peau noire]
+[lets not watch tv] =&gt; [ne regardons pas la television]
+[youre talkative] =&gt; [tu es bavard]
+[i hate fanatics] =&gt; [je deteste les fanatiques]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[262]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_texts</span> <span class="o">=</span> <span class="n">clean_pairs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
@@ -12012,14 +13383,33 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Length of target_texts: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">input_texts</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Length of input_texts:  (20000,)
+Length of target_texts: (20000,)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[263]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_encoder_seq_length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">input_texts</span><span class="p">)</span>
@@ -12029,14 +13419,32 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;max length of target sentences: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">max_decoder_seq_length</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>max length of input  sentences: 19
+max length of target sentences: 56
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Remark:</strong> To this end, you have two lists of sentences: input_texts and target_texts</p>
 
@@ -12044,8 +13452,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Text-processing">2. Text processing<a class="anchor-link" href="#2.-Text-processing">&#182;</a></h2><h3 id="2.1.-Convert-texts-to-sequences">2.1. Convert texts to sequences<a class="anchor-link" href="#2.1.-Convert-texts-to-sequences">&#182;</a></h3><ul>
 <li>Input: A list of $n$ sentences (with max length $t$).</li>
@@ -12057,7 +13464,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[264]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.preprocessing.text</span> <span class="k">import</span> <span class="n">Tokenizer</span>
@@ -12083,14 +13490,35 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of target_token_index: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">target_token_index</span><span class="p">)))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>shape of encoder_input_seq: (20000, 19)
+shape of input_token_index: 27
+shape of decoder_input_seq: (20000, 56)
+shape of target_token_index: 29
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[265]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_encoder_tokens</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_token_index</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
@@ -12100,14 +13528,32 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;num_decoder_tokens: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_decoder_tokens</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>num_encoder_tokens: 28
+num_decoder_tokens: 30
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Remark:</strong> To this end, the input language and target language texts are converted to 2 matrices.</p>
 <ul>
@@ -12119,8 +13565,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The followings print a sentence and its representation as a sequence.</p>
 
@@ -12129,33 +13574,75 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[266]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">target_texts</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[266]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\tjaurai besoin de votre aide\n&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[267]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">decoder_input_seq</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[267]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([10, 19,  4,  8, 12,  4,  5,  2, 21,  1,  3,  9,  5,  7,  2, 18,  1,
+        2, 17,  9,  6, 12,  1,  2,  4,  5, 18,  1, 11,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0])</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.2.-One-hot-encode">2.2. One-hot encode<a class="anchor-link" href="#2.2.-One-hot-encode">&#182;</a></h2><ul>
 <li>Input: A list of $n$ sentences (with max length $t$).</li>
@@ -12168,7 +13655,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[268]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.utils</span> <span class="k">import</span> <span class="n">to_categorical</span>
@@ -12194,14 +13681,32 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">decoder_input_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(20000, 19, 28)
+(20000, 56, 30)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Build-the-networks-(for-training)">3. Build the networks (for training)<a class="anchor-link" href="#3.-Build-the-networks-(for-training)">&#182;</a></h2><ul>
 <li><p>Build encoder, decoder, and connect the two modules to get "model".</p>
@@ -12214,8 +13719,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.1.-Encoder-network">3.1. Encoder network<a class="anchor-link" href="#3.1.-Encoder-network">&#182;</a></h3><ul>
 <li><p>Input:  one-hot encode of the input language</p>
@@ -12232,7 +13736,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[269]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">LSTM</span>
@@ -12255,14 +13759,13 @@ div#notebook {
                       <span class="n">name</span><span class="o">=</span><span class="s1">&#39;encoder&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Print a summary and save the encoder network structure to "./encoder.pdf"</p>
 
@@ -12271,30 +13774,57 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[270]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span>
-<span class="kn">from</span> <span class="nn">keras.utils.vis_utils</span> <span class="k">import</span> <span class="n">model_to_dot</span><span class="p">,</span> <span class="n">plot_model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from IPython.display import SVG</span>
+<span class="c1"># from keras.utils.vis_utils import model_to_dot, plot_model</span>
 
-<span class="n">SVG</span><span class="p">(</span><span class="n">model_to_dot</span><span class="p">(</span><span class="n">encoder_model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s1">&#39;dot&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">))</span>
+<span class="c1"># SVG(model_to_dot(encoder_model, show_shapes=False).create(prog=&#39;dot&#39;, format=&#39;svg&#39;))</span>
 
-<span class="n">plot_model</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="n">encoder_model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">to_file</span><span class="o">=</span><span class="s1">&#39;encoder.pdf&#39;</span>
-<span class="p">)</span>
+<span class="c1"># plot_model(</span>
+<span class="c1">#     model=encoder_model, show_shapes=False,</span>
+<span class="c1">#     to_file=&#39;encoder.pdf&#39;</span>
+<span class="c1"># )</span>
 
 <span class="n">encoder_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+encoder_inputs (InputLayer)  (None, None, 28)          0         
+_________________________________________________________________
+encoder_lstm (LSTM)          [(None, 256), (None, 256) 291840    
+=================================================================
+Total params: 291,840
+Trainable params: 291,840
+Non-trainable params: 0
+_________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.2.-Decoder-network">3.2. Decoder network<a class="anchor-link" href="#3.2.-Decoder-network">&#182;</a></h3><ul>
 <li><p>Inputs:</p>
@@ -12314,7 +13844,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[271]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">LSTM</span><span class="p">,</span> <span class="n">Dense</span>
@@ -12341,14 +13871,13 @@ div#notebook {
                       <span class="n">name</span><span class="o">=</span><span class="s1">&#39;decoder&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Print a summary and save the encoder network structure to "./decoder.pdf"</p>
 
@@ -12357,30 +13886,65 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[272]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span>
-<span class="kn">from</span> <span class="nn">keras.utils.vis_utils</span> <span class="k">import</span> <span class="n">model_to_dot</span><span class="p">,</span> <span class="n">plot_model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from IPython.display import SVG</span>
+<span class="c1"># from keras.utils.vis_utils import model_to_dot, plot_model</span>
 
-<span class="n">SVG</span><span class="p">(</span><span class="n">model_to_dot</span><span class="p">(</span><span class="n">decoder_model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s1">&#39;dot&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">))</span>
+<span class="c1">#SVG(model_to_dot(decoder_model, show_shapes=False).create(prog=&#39;dot&#39;, format=&#39;svg&#39;))</span>
 
-<span class="n">plot_model</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="n">decoder_model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">to_file</span><span class="o">=</span><span class="s1">&#39;decoder.pdf&#39;</span>
-<span class="p">)</span>
+<span class="c1">#plot_model(</span>
+<span class="c1">#    model=decoder_model, show_shapes=False,</span>
+<span class="c1">#    to_file=&#39;decoder.pdf&#39;</span>
+<span class="c1">#)</span>
 
 <span class="n">decoder_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+decoder_input_x (InputLayer)    (None, None, 30)     0                                            
+__________________________________________________________________________________________________
+decoder_input_h (InputLayer)    (None, 256)          0                                            
+__________________________________________________________________________________________________
+decoder_input_c (InputLayer)    (None, 256)          0                                            
+__________________________________________________________________________________________________
+decoder_lstm (LSTM)             [(None, None, 256),  293888      decoder_input_x[0][0]            
+                                                                 decoder_input_h[0][0]            
+                                                                 decoder_input_c[0][0]            
+__________________________________________________________________________________________________
+decoder_dense (Dense)           (None, None, 30)     7710        decoder_lstm[0][0]               
+==================================================================================================
+Total params: 301,598
+Trainable params: 301,598
+Non-trainable params: 0
+__________________________________________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.3.-Connect-the-encoder-and-decoder">3.3. Connect the encoder and decoder<a class="anchor-link" href="#3.3.-Connect-the-encoder-and-decoder">&#182;</a></h3>
 </div>
@@ -12388,7 +13952,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[273]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># input layers</span>
@@ -12405,51 +13969,105 @@ div#notebook {
               <span class="n">name</span><span class="o">=</span><span class="s1">&#39;model_training&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[274]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">state_h</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">decoder_input_h</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor(&#34;decoder_lstm_16/while/Exit_2:0&#34;, shape=(?, 256), dtype=float32)
+Tensor(&#34;decoder_input_h_8:0&#34;, shape=(?, 256), dtype=float32)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[275]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span>
-<span class="kn">from</span> <span class="nn">keras.utils.vis_utils</span> <span class="k">import</span> <span class="n">model_to_dot</span><span class="p">,</span> <span class="n">plot_model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from IPython.display import SVG</span>
+<span class="c1"># from keras.utils.vis_utils import model_to_dot, plot_model</span>
 
-<span class="n">SVG</span><span class="p">(</span><span class="n">model_to_dot</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s1">&#39;dot&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">))</span>
+<span class="c1">#SVG(model_to_dot(model, show_shapes=False).create(prog=&#39;dot&#39;, format=&#39;svg&#39;))</span>
 
-<span class="n">plot_model</span><span class="p">(</span>
-    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">show_shapes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">to_file</span><span class="o">=</span><span class="s1">&#39;model_training.pdf&#39;</span>
-<span class="p">)</span>
+<span class="c1">#plot_model(</span>
+<span class="c1">#    model=model, show_shapes=False,</span>
+<span class="c1">#    to_file=&#39;model_training.pdf&#39;</span>
+<span class="c1">#)</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+encoder_input_x (InputLayer)    (None, None, 28)     0                                            
+__________________________________________________________________________________________________
+decoder_input_x (InputLayer)    (None, None, 30)     0                                            
+__________________________________________________________________________________________________
+encoder (Model)                 [(None, 256), (None, 291840      encoder_input_x[0][0]            
+__________________________________________________________________________________________________
+decoder_lstm (LSTM)             [(None, None, 256),  293888      decoder_input_x[0][0]            
+                                                                 encoder[1][0]                    
+                                                                 encoder[1][1]                    
+__________________________________________________________________________________________________
+decoder_dense (Dense)           (None, None, 30)     7710        decoder_lstm[1][0]               
+==================================================================================================
+Total params: 593,438
+Trainable params: 593,438
+Non-trainable params: 0
+__________________________________________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.5.-Fit-the-model-on-the-bilingual-dataset">3.5. Fit the model on the bilingual dataset<a class="anchor-link" href="#3.5.-Fit-the-model-on-the-bilingual-dataset">&#182;</a></h3><ul>
 <li><p>encoder_input_data: one-hot encode of the input language</p>
@@ -12469,7 +14087,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of encoder_input_data&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">encoder_input_data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
@@ -12477,33 +14095,301 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of decoder_target_data&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">decoder_target_data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>shape of encoder_input_data(20000, 19, 28)
+shape of decoder_input_data(20000, 56, 30)
+shape of decoder_target_data(20000, 56, 30)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[277]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">EarlyStopping</span><span class="p">,</span> <span class="n">ModelCheckpoint</span>
+<span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">),</span>
+            <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s1">&#39;save&#39;</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="s1">&#39;seq2seq_second.</span><span class="si">{epoch:02d}</span><span class="s1">-</span><span class="si">{val_loss:.2f}</span><span class="s1">.hdf5&#39;</span><span class="p">,</span>\
+                            <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="mi">5</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">)</span>
+</pre></div>
 
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">([</span><span class="n">encoder_input_data</span><span class="p">,</span> <span class="n">decoder_input_data</span><span class="p">],</span>  <span class="c1"># training data</span>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">([</span><span class="n">encoder_input_data</span><span class="p">,</span> <span class="n">decoder_input_data</span><span class="p">],</span>  <span class="c1"># training data</span>
           <span class="n">decoder_target_data</span><span class="p">,</span>                       <span class="c1"># labels (left shift of the target sequences)</span>
-          <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+          <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">)</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;seq2seq.h5&#39;</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Train on 16000 samples, validate on 4000 samples
+Epoch 1/300
+16000/16000 [==============================] - 23s 1ms/step - loss: 1.1646 - val_loss: 0.9024
+Epoch 2/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.8797 - val_loss: 0.7606
+Epoch 3/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.8008 - val_loss: 0.7078
+Epoch 4/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.7489 - val_loss: 0.6784
+Epoch 5/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.7109 - val_loss: 0.6402
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>c:\users\david\appdata\local\programs\python\python36\lib\site-packages\keras\engine\network.py:877: UserWarning: Layer decoder_lstm was passed non-serializable keyword arguments: {&#39;initial_state&#39;: [&lt;tf.Tensor &#39;encoder_8/encoder_lstm/while/Exit_2:0&#39; shape=(?, 256) dtype=float32&gt;, &lt;tf.Tensor &#39;encoder_8/encoder_lstm/while/Exit_3:0&#39; shape=(?, 256) dtype=float32&gt;]}. They will not be included in the serialized model (and thus will be missing at deserialization time).
+  &#39;. They will not be included &#39;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 6/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.6803 - val_loss: 0.6096
+Epoch 7/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.6539 - val_loss: 0.5901
+Epoch 8/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.6432 - val_loss: 0.5715
+Epoch 9/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.6194 - val_loss: 0.5536
+Epoch 10/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5995 - val_loss: 0.5375
+Epoch 11/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5835 - val_loss: 0.5274
+Epoch 12/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5691 - val_loss: 0.5098
+Epoch 13/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5574 - val_loss: 0.4991
+Epoch 14/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5466 - val_loss: 0.4870
+Epoch 15/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5345 - val_loss: 0.4780
+Epoch 16/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5256 - val_loss: 0.4725
+Epoch 17/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5161 - val_loss: 0.4610
+Epoch 18/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.5072 - val_loss: 0.4560
+Epoch 19/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4996 - val_loss: 0.4482
+Epoch 20/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4919 - val_loss: 0.4395
+Epoch 21/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4837 - val_loss: 0.4352
+Epoch 22/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4783 - val_loss: 0.4292
+Epoch 23/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4718 - val_loss: 0.4281
+Epoch 24/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4658 - val_loss: 0.4212
+Epoch 25/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4603 - val_loss: 0.4164
+Epoch 26/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4548 - val_loss: 0.4110
+Epoch 27/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4509 - val_loss: 0.4084
+Epoch 28/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4457 - val_loss: 0.4049
+Epoch 29/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.4408 - val_loss: 0.4028
+Epoch 30/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4371 - val_loss: 0.3978
+Epoch 31/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4327 - val_loss: 0.3959
+Epoch 32/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4292 - val_loss: 0.3922
+Epoch 33/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4245 - val_loss: 0.3883
+Epoch 34/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4220 - val_loss: 0.3875
+Epoch 35/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4179 - val_loss: 0.3855
+Epoch 36/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4144 - val_loss: 0.3822
+Epoch 37/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.4113 - val_loss: 0.3797
+Epoch 38/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4077 - val_loss: 0.3782
+Epoch 39/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4053 - val_loss: 0.3763
+Epoch 40/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4023 - val_loss: 0.3726
+Epoch 41/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.4003 - val_loss: 0.3714
+Epoch 42/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3963 - val_loss: 0.3705
+Epoch 43/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3947 - val_loss: 0.3688
+Epoch 44/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3926 - val_loss: 0.3660
+Epoch 45/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3893 - val_loss: 0.3640
+Epoch 46/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3868 - val_loss: 0.3637
+Epoch 47/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3848 - val_loss: 0.3635
+Epoch 48/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3821 - val_loss: 0.3610
+Epoch 49/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3804 - val_loss: 0.3598
+Epoch 50/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3785 - val_loss: 0.3598
+Epoch 51/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3763 - val_loss: 0.3555
+Epoch 52/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3737 - val_loss: 0.3554
+Epoch 53/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3715 - val_loss: 0.3541
+Epoch 54/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3704 - val_loss: 0.3527
+Epoch 55/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3676 - val_loss: 0.3529
+Epoch 56/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3669 - val_loss: 0.3541
+Epoch 57/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3644 - val_loss: 0.3509
+Epoch 58/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3625 - val_loss: 0.3518
+Epoch 59/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3598 - val_loss: 0.3480
+Epoch 60/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3591 - val_loss: 0.3473
+Epoch 61/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.3572 - val_loss: 0.3467
+Epoch 62/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3559 - val_loss: 0.3472
+Epoch 63/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3537 - val_loss: 0.3436
+Epoch 64/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3534 - val_loss: 0.3435
+Epoch 65/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3514 - val_loss: 0.3431
+Epoch 66/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3494 - val_loss: 0.3447
+Epoch 67/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3486 - val_loss: 0.3429
+Epoch 68/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.3457 - val_loss: 0.3423
+Epoch 69/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3441 - val_loss: 0.3408
+Epoch 70/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3443 - val_loss: 0.3386
+Epoch 71/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3426 - val_loss: 0.3386
+Epoch 72/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3413 - val_loss: 0.3382
+Epoch 73/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3410 - val_loss: 0.3391
+Epoch 74/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3396 - val_loss: 0.3401
+Epoch 75/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3363 - val_loss: 0.3380
+Epoch 76/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.3358 - val_loss: 0.3387
+Epoch 77/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3353 - val_loss: 0.3367
+Epoch 78/300
+16000/16000 [==============================] - 24s 2ms/step - loss: 0.3329 - val_loss: 0.3373
+Epoch 79/300
+16000/16000 [==============================] - 22s 1ms/step - loss: 0.3324 - val_loss: 0.3359
+Epoch 80/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.3313 - val_loss: 0.3346
+Epoch 81/300
+16000/16000 [==============================] - 21s 1ms/step - loss: 0.3303 - val_loss: 0.3342
+Epoch 82/300
+16000/16000 [==============================] - 22s 1ms/step - loss: 0.3292 - val_loss: 0.3334
+Epoch 83/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3282 - val_loss: 0.3350
+Epoch 84/300
+16000/16000 [==============================] - 22s 1ms/step - loss: 0.3271 - val_loss: 0.3342
+Epoch 85/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3243 - val_loss: 0.3317
+Epoch 86/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3248 - val_loss: 0.3311
+Epoch 87/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3238 - val_loss: 0.3333
+Epoch 88/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3232 - val_loss: 0.3332
+Epoch 89/300
+16000/16000 [==============================] - 20s 1ms/step - loss: 0.3218 - val_loss: 0.3318
+Epoch 90/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3199 - val_loss: 0.3322
+Epoch 91/300
+16000/16000 [==============================] - 19s 1ms/step - loss: 0.3195 - val_loss: 0.3329
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.-Make-predictions">4. Make predictions<a class="anchor-link" href="#4.-Make-predictions">&#182;</a></h2><h3 id="4.1.-Translate-English-to-XXX">4.1. Translate English to XXX<a class="anchor-link" href="#4.1.-Translate-English-to-XXX">&#182;</a></h3><ol>
 <li>Encoder read a sentence (source language) and output its final states, $h_t$ and $c_t$.</li>
@@ -12518,7 +14404,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[280]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reverse-lookup token index to decode sequences back to something readable.</span>
@@ -12526,14 +14412,14 @@ div#notebook {
 <span class="n">reverse_target_char_index</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">char</span><span class="p">)</span> <span class="k">for</span> <span class="n">char</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">target_token_index</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[281]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decode_sequence</span><span class="p">(</span><span class="n">input_seq</span><span class="p">):</span>
@@ -12566,14 +14452,14 @@ div#notebook {
     <span class="k">return</span> <span class="n">decoded_sentence</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">seq_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2100</span><span class="p">,</span> <span class="mi">2120</span><span class="p">):</span>
@@ -12583,18 +14469,114 @@ div#notebook {
     <span class="n">decoded_sentence</span> <span class="o">=</span> <span class="n">decode_sequence</span><span class="p">(</span><span class="n">input_seq</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;English:       &#39;</span><span class="p">,</span> <span class="n">input_texts</span><span class="p">[</span><span class="n">seq_index</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;German (true): &#39;</span><span class="p">,</span> <span class="n">target_texts</span><span class="p">[</span><span class="n">seq_index</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;German (pred): &#39;</span><span class="p">,</span> <span class="n">decoded_sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;French (true): &#39;</span><span class="p">,</span> <span class="n">target_texts</span><span class="p">[</span><span class="n">seq_index</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;French (pred): &#39;</span><span class="p">,</span> <span class="n">decoded_sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-
+English:        come on admit it
+French (true):  allez admettezle
+French (pred):  allez aider moi tout le monde
+-
+English:        i need to do this
+French (true):  il me faut le faire
+French (pred):  jai besoin de vous aller tout les deux
+-
+English:        you may go
+French (true):  tu peux ten aller
+French (pred):  vous pouvez vous aider
+-
+English:        i owe you a lunch
+French (true):  je vous dois un dejeuner
+French (pred):  je vous dois un peu de main
+-
+English:        i want a low table
+French (true):  je veux une table basse
+French (pred):  je veux un peu de main
+-
+English:        it tasted sweet
+French (true):  ca goutait sucre
+French (pred):  ca a pris un peu de main
+-
+English:        we found something
+French (true):  on a trouve quelque chose
+French (pred):  nous lavons vu un aller
+-
+English:        it was just hype
+French (true):  cetait juste du battage publicitaire
+French (pred):  cetait tres bien
+-
+English:        she drives me crazy
+French (true):  elle me rend chevre
+French (pred):  elle me lent de la porte
+-
+English:        its a world record
+French (true):  cest un record du monde
+French (pred):  cest une bonne idee
+-
+English:        didnt you go out
+French (true):  netesvous pas sortis
+French (pred):  netesvous pas serieux
+-
+English:        advance two steps
+French (true):  avance de deux pas
+French (pred):  ajune ma voiture de maintenant
+-
+English:        tom keeps his word
+French (true):  tom tient parole
+French (pred):  tom a pris de magnaise
+-
+English:        ive never met her
+French (true):  je ne lai jamais rencontree
+French (pred):  je ne lai jamais vue
+-
+English:        youll need this
+French (true):  tu auras besoin de ca
+French (pred):  tu as lair en colere
+-
+English:        whos tom
+French (true):  cest qui tom
+French (pred):  qui est ca
+-
+English:        i checked my bags
+French (true):  jai enregistre mes bagages
+French (pred):  jai fait ce que je dis
+-
+English:        wheres the knife
+French (true):  ou est le couteau
+French (pred):  ou est la maison
+-
+English:        we try our best
+French (true):  nous faisons de notre mieux
+French (pred):  nous sommes tous deux bonnes
+-
+English:        are you blushing
+French (true):  rougissezvous
+French (pred):  estu serieux
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="4.2.-Translate-an-English-sentence-to-the-target-language">4.2. Translate an English sentence to the target language<a class="anchor-link" href="#4.2.-Translate-an-English-sentence-to-the-target-language">&#182;</a></h3><ol>
 <li>Tokenization</li>
@@ -12607,29 +14589,46 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[283]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_sentence</span> <span class="o">=</span> <span class="s1">&#39;why is that&#39;</span>
 
-<span class="n">input_sequence</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">do</span> <span class="n">tokenization</span><span class="o">...&gt;</span>
+<span class="n">input_sequences</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">text2sequences</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">input_sentence</span><span class="p">),</span> <span class="p">[</span><span class="n">input_sentence</span><span class="p">])</span>
 
-<span class="n">input_x</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">do</span> <span class="n">one</span><span class="o">-</span><span class="n">hot</span> <span class="n">encode</span><span class="o">...&gt;</span>
-
-<span class="n">translated_sentence</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">do</span> <span class="n">translation</span><span class="o">...&gt;</span>
+<span class="n">translated_sentence</span> <span class="o">=</span> <span class="n">decode_sequence</span><span class="p">(</span><span class="n">input_seq</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;source sentence is: &#39;</span> <span class="o">+</span> <span class="n">input_sentence</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;translated sentence is: &#39;</span> <span class="o">+</span> <span class="n">translated_sentence</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>source sentence is: why is that
+translated sentence is: estu serieux
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-Evaluate-the-translation-using-BLEU-score">5. Evaluate the translation using BLEU score<a class="anchor-link" href="#5.-Evaluate-the-translation-using-BLEU-score">&#182;</a></h2><p>Reference:</p>
 <ul>
@@ -12640,6 +14639,149 @@ div#notebook {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[284]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.translate.bleu_score</span> <span class="k">import</span> <span class="n">sentence_bleu</span>
+
+<span class="c1"># reference from first BLEU link</span>
+
+<span class="c1"># reference = [[&#39;the&#39;, &#39;cat&#39;, &#39;is&#39;, &#39;on&#39;, &#39;the&#39;, &#39;mat&#39;]]</span>
+<span class="c1"># candidate = [&#39;the&#39;, &#39;cat&#39;, &#39;is&#39;, &#39;on&#39;, &#39;cat&#39;]</span>
+<span class="c1"># score = sentence_bleu(reference, candidate)</span>
+<span class="c1"># print(score)</span>
+
+
+<span class="c1"># use test rand indices to test on BLEU</span>
+<span class="n">test_pairs</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">(</span><span class="n">pairs</span><span class="p">)[</span><span class="n">test_indices</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">test_pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">n_bleu_tests</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">score_total</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_bleu_tests</span><span class="p">):</span>
+    <span class="c1"># get translation</span>
+    <span class="n">input_sentence</span> <span class="o">=</span> <span class="n">test_pairs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">input_sequences</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">text2sequences</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">input_sentence</span><span class="p">),</span> <span class="p">[</span><span class="n">input_sentence</span><span class="p">])</span>
+    <span class="n">translated_sentence</span> <span class="o">=</span> <span class="n">decode_sequence</span><span class="p">(</span><span class="n">input_seq</span><span class="p">)</span>
+    
+    <span class="c1"># get translation&#39;s bleu score</span>
+    <span class="n">reference</span> <span class="o">=</span> <span class="p">[</span><span class="n">test_pairs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+    <span class="n">candidate</span> <span class="o">=</span> <span class="n">translated_sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">sentence_bleu</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="n">candidate</span><span class="p">)</span>
+    <span class="n">score_total</span> <span class="o">+=</span> <span class="n">score</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;source sentence is: &#39;</span> <span class="o">+</span> <span class="n">input_sentence</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;translated sentence is: &#39;</span> <span class="o">+</span> <span class="n">translated_sentence</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;true traslation:&#39;</span><span class="p">,</span> <span class="n">test_pairs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;score:&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">AVERAGE SCORE:&quot;</span><span class="p">,</span> <span class="n">score_total</span> <span class="o">/</span> <span class="n">n_bleu_tests</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;i want to quit&#39; &#39;je veux demissionner&#39;]
+-
+source sentence is: i want to quit
+translated sentence is: estu serieux
+
+true traslation: je veux demissionner
+score: 0
+-
+source sentence is: its not a loan
+translated sentence is: estu serieux
+
+true traslation: ce nest pas un pret
+score: 0
+-
+source sentence is: come back here
+translated sentence is: estu serieux
+
+true traslation: revenez ici
+score: 0
+-
+source sentence is: were sunk
+translated sentence is: estu serieux
+
+true traslation: on est foutu
+score: 0
+-
+source sentence is: were really good
+translated sentence is: estu serieux
+
+true traslation: nous sommes vraiment bons
+score: 0
+-
+source sentence is: dont wait for me
+translated sentence is: estu serieux
+
+true traslation: ne mattendez pas
+score: 0
+-
+source sentence is: turn it off
+translated sentence is: estu serieux
+
+true traslation: eteinsle
+score: 0
+-
+source sentence is: i love the sun
+translated sentence is: estu serieux
+
+true traslation: jadore le soleil
+score: 0
+-
+source sentence is: this box is light
+translated sentence is: estu serieux
+
+true traslation: cette caisse est legere
+score: 0
+-
+source sentence is: tom is voting
+translated sentence is: estu serieux
+
+true traslation: tom est en train de voter
+score: 0
+
+AVERAGE SCORE: 0.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>

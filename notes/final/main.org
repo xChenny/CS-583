@@ -1,0 +1,138 @@
+#+TITLE:     Deep Learning Final Notes
+#+AUTHOR:    Andrew Chen
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+OPTIONS: toc:nil
+
+
+* Machine Learning Basics
+
+** Dimensionality Reduction
+   - Supervised: Linear Discriminant Analysis
+   - Unsupervised: PCA and Autoencoder
+
+* CNN
+
+** Tricks to Know For Better Model Generalization 
+
+   1. Dropout
+      1. Works because it forces the model to make a decision with limited information, thereby eliminating a lot of unnecessary parameters
+   2. Data Augmentation
+   3. Pre-train on different Larger Dataset
+   4. Ensemble methods
+      1. Have multiple models make a prediction and take the majority vote
+   5. Multitask learning
+      1. Training a set of lower level layers and then later on training top level Conv layers for a specific task
+         1. ie: Train low level layers for learning low level features, and then train conv layers to recognize face, age, race, etc.
+         
+** Tricks for Better Optimization
+
+   1. Batch Normalization
+      1. Change the scale of the metrics which reduces condition number of matrix
+      2. Better conditioned Hessian -> Faster Convergence
+      3. Every feature has 0 mean and unit variance
+   2. Gradient Injection
+   3. Skip Connections
+   
+* Misc ML Facts
+
+  1. In higher dimensions, it becomes improbable to find global minimum
+     1. You will find saddle points and local minima
+     2. If you use GD, you will probably find a Saddle point because gradient near saddle points is near 0
+     3. SGD can find local minima because it's random and noisy
+  2. Large Batch Size -> poor generalization
+     1. Large Batch size -> faster training
+     
+* RNN
+
+** Basic Steps of Text Processing
+
+   1. Tokenize corpus
+   2. Encode tokens
+   3. Align encodings by padding shorter encodings with 0s in the front
+   4. Convert encodings (vectors) to work embeddings (matrix)
+      1. Train to create a matrix of (vocab_size x embedding dimension)
+      2. For each encoding (scalar), convert it to a vector, and the final result will be a matrix where each vector within represents a word (in vector form)
+   5. Rules of Thumb
+      1. Always use LSTM over SimpleRNN
+      2. Always use LSTM dropout to alleviate overfitting
+      3. Use Bi-LSTM whenever possible
+      4. Use stacked LSTM if sample size is big
+      5. Pretrain the embedding layer if sample size is small
+   6. SimpleRNN Implementation
+      #+CAPTION: Simple LSTM Implementation
+      #+NAME:   tab:basic-data
+      [[./pictures/rnn_keras.png]]
+   7. Attention
+      1. For Seq2Seq models.
+         1. encoder -> final state.
+            1. For each state in decoder, we look at each state in the original encoding and we choose the one that looks most similar
+               1. Attention has time complexity of O(l1 * l2) instead of O(l1 + l2) (compared to w/o it)
+   8. Self Attention
+      1. For RNN/LSTM/GRU layers.
+         1. For each state in RNN, we look back one state to generate new hidden state
+          
+            #+ATTR_LATEX: :width 15cm :placement [ht!] 
+            #+CAPTION: 1. Calculating a hidden state
+            #+NAME:   tab:basic-data
+            [[./pictures/calc_hidden_state.png]]
+
+          ---
+
+         2. Calculate weights by getting similarity of current hidden state and previous context vector
+
+          #+ATTR_LATEX: :width 15cm :placement [ht!] 
+          #+CAPTION: 1. Calculating current weight 
+          #+NAME:   tab:basic-data
+          [[./pictures/calc_weights.png]]
+
+          ---
+
+         3. To Calculate Context vectors, we use use current hidden state and weight and all those from states before
+
+          #+ATTR_LATEX: :width 15cm :placement [ht!] 
+          #+CAPTION: 2. Calculating a context vector based on all previous states
+          #+NAME:   tab:basic-data
+          [[./pictures/calc_context_vector.png]]
+
+   9. Transformer Model
+
+      1. Is a seq2seq model
+      2. Uses Multihead attention
+      3. Not RNN
+      4. Purely Attention and FC layers
+         1. More computation than RNNs
+         2. Better performance on larger datasets than RNNs
+         
+          #+ATTR_LATEX: :width 15cm :placement [ht!] 
+          #+CAPTION: Transformer Model Attention Parameters
+          #+NAME:   tab:basic-data
+          [[./pictures/transformer_params.png]]
+
+          #+ATTR_LATEX: :width 15cm :placement [ht!] 
+          #+CAPTION: Transformer Model
+          #+NAME:   tab:basic-data
+          [[./pictures/transformer.png]]
+* Number of Trainable parameters
+
+  - Dense: ~output_size * (input_size + 1)~
+  - Conv2D: ~output_channels * (input_channels (kernel_size + 1))~
+  - BatchNormalization: ~4 * input_channels~
+  - RNN: ~output_shape * (output_shape + input_channels) + output_shape~
+  - LSTM: ~4 * RNN~
+
+
+
+* Facial Recognition
+
+  1. Softmax classifier is bad bc its a Dense Output Layer w/ activation function of Softmax
+     1. # trainable parameters for Dense is ~output_size * (input_size + 1)~
+     2. If # faces ~= 10M, and input_size = 1000, then # trainable parameters = 10M * 1000 = 10G
+     
+* Definitions
+
+  1. Precision: How many selected items are relevant?
+     1. ~relevant items / all items~
+  2. Recall: How many relevant items are selected?
+     1. ~relevant items / all relevant items~
+  3. Positive Semidefinite
+     1. For convex functions, the Hessian Matrix is positive semidefinite everywhere
