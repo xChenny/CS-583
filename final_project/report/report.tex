@@ -1,0 +1,184 @@
+% Created 2019-05-19 Sun 18:33
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\author{Andrew Chen}
+\date{\today}
+\title{Deep Learning Final Project}
+\hypersetup{
+ pdfauthor={Andrew Chen},
+ pdftitle={Deep Learning Final Project},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{center}
+I pledge my honor that I have abided by the Stevens Honor System
+\end{center}
+
+\section{Summary}
+\label{sec:org8c513e8}
+
+I participated in a Kaggle competition called \href{https://www.kaggle.com/c/quora-insincere-questions-classification/overview}{Quora Insincere Questions Classification} and I worked by myself.
+The final methodology that I am using relies on ensembling 3 of the 4 provided word embeddings,
+then, I use a Bidirectional GRU layer, which compared to LSTM, according to\href{https://arxiv.org/pdf/1412.3555v1.pdf}{ Chung et al. 2014} provides similar performance but with less training time.
+After this, I performed normalization and applied a Dense layer to make a binary classification decision to determine if the input text was sincere or not
+
+\section{Problem Description}
+\label{sec:orge64b4b0}
+
+\subsection{Problem:}
+\label{sec:org024ec8d}
+
+The problem is to classify questions as being sincere or insincere based on the following criteria:
+
+\begin{itemize}
+\item Has a non-neutral tone
+\begin{itemize}
+\item Has an exaggerated tone to underscore a point about a group of people
+\item Is rhetorical and meant to imply a statement about a group of people
+\end{itemize}
+\item Is disparaging or inflammatory
+\begin{itemize}
+\item Suggests a discriminatory idea against a protected class of people, or seeks confirmation of a stereotype
+\item Makes disparaging attacks/insults against a specific person or group of people
+\item Based on an outlandish premise about a group of people
+\item Disparages against a characteristic that is not fixable and not measurable
+\end{itemize}
+\item Isn't grounded in reality
+\begin{itemize}
+\item Based on false information, or contains absurd assumptions
+\end{itemize}
+\item Uses sexual content (incest, bestiality, pedophilia) for shock value, and not to seek genuine answers
+\end{itemize}
+
+
+\subsection{Data:}
+\label{sec:org1382ae9}
+
+The data provided are 2 files: \texttt{train.csv}, and \texttt{test.csv}.
+\texttt{train.csv} contains \texttt{qid} (question id), \texttt{question\_text} (the question to classify), \texttt{target} (the label which is 1 or 0).
+\texttt{test.csv} contains \texttt{qid}, and \texttt{question\_text}.
+
+The task is to create a \texttt{submission.csv} that takes the questions in \texttt{test.csv} and give each question a label - 1 or 0. 0 represents a 
+sincere question, and 1 is for insincere questions.
+
+\section{Solution}
+\label{sec:orgcc37574}
+
+I did everything on Kaggle Kernel.
+
+\subsection{Model}
+\label{sec:org94d7c38}
+
+\begin{enumerate}
+\item Input Layer
+\item Embedding Layer
+\item Bidirectional GRU Layer
+\item Global Max Pool 1D Layer
+\item Dense Output Layer
+\end{enumerate}
+
+I chose to use a GRU Layer instead of the LSTM Layer that we learned in class because according to the paper 
+linked in the summary, GRU was faster to train, while still having good performance. I have looked at other 
+sources which say that GRU's may be slightly worse at retaining long-term memory, but it seemed okay in this situation
+
+With this configuration, I only needed two epochs before my model was unable to get any better.
+
+
+The bigger choice in this problem was seeing what embedding I should use to maximize performance.
+The kernel provides you with 4 word embedding: Paragram, Glove, Wikinews, and GoogleNews. What I ended up doing was that I first made a baseline
+model to compare performance without word embedding, and then made another 3 for seeing performance of using 1 of the embeddings,
+and then lastly another one to compare performance of when we embed all of the results together. I did not implement the GoogleNews word 
+embeddings because the kaggle kernel has a maximum RAM limit of 13GB. When I was running my kernel cells (with 3 of the 4 embeddings), 
+I hit a maximum of around 12 GB of RAM. If I had implemented one more, I would go over the RAM limit of the kernel. However, even with only 3 of the 4,
+I found that ensembling the results of the 3 models had an improvement over just using one word embedding, although not by much (\textasciitilde{}1-2\% improvement).
+
+
+\subsection{Settings}
+\label{sec:org579cb4f}
+
+Because this is a binary classification problem, my loss function was binary cross entropy. The optimizer was \texttt{adam}.
+
+Other Parameters:
+
+\begin{itemize}
+\item Embedding size: 300 (how big is each word vector)
+\item Max Features: 50000 (how many unique words to use in embedding layer)
+\item Max Length: 100 (Number of words in each question to use before cutting it off)
+\end{itemize}
+
+\subsection{Advanced Tricks}
+\label{sec:org7d4ab91}
+
+\begin{enumerate}
+\item Ensemble: I used emsembling on the word embeddings layer and found that it had a (1-2\% improvement) over using just the Glove word embeddings
+which was the best of the word embeddings on this particular data set.
+\end{enumerate}
+
+\section{Comparison Methods}
+\label{sec:orgdc150c3}
+
+
+I implemented the following models and tested them against each other:
+
+\begin{enumerate}
+\item Random guess model
+\item Naive Sentiment analysis model
+\item NN-based model without pretrained embedding layer
+\item NN-based model with Paragram Word Embedding weights
+\item NN-based model with Glove Word Embedding weights
+\item NN-based model with Wiki-news Word Embedding weights
+\item Ensembled results from Models 4-6
+\end{enumerate}
+
+
+\section{Outcome}
+\label{sec:org9862f01}
+
+I did not participate in an active competition. My final results:
+
+
+\begin{center}
+\begin{tabular}{rrr}
+Attempt & Public Score & Private Score\\
+\hline
+1 & 0.62441 & 0.62923\\
+2 & 0.64745 & 0.65736\\
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Attempt One}
+\label{sec:orga41d676}
+
+I just used the Paragram word embedding.
+
+\subsection{Attempt Two}
+\label{sec:orgffde2a7}
+
+I used the Ensemble methodology.
+
+
+\section{Results}
+\label{sec:org6b5a73b}
+
+The top scores are in the 0.701 range. If this were an active competition, I would have placed 1234th in the\href{https://www.kaggle.com/c/quora-insincere-questions-classification/leaderboard}{ private leaderboard}, and 1242th in the \href{https://www.kaggle.com/c/quora-insincere-questions-classification/leaderboard}{public leaderboards}  
+\end{document}
